@@ -61,7 +61,7 @@ export class TaskService {
     }
   }
 
-  /* getDatoParaEditar(): Observable<Task | null> {
+  getDatoParaEditar(): Observable<Task | null> {
     return this.updatedTask.asObservable();
   }
 
@@ -71,7 +71,7 @@ export class TaskService {
 
   limpiarDatoParaEditar() {
     this.updatedTask.next(null); 
-  } */
+  }
 
   private generateId(): number {
     const ids = this.datos.map(task => task.id); 

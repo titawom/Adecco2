@@ -1,1 +1,13 @@
-<p>task-form works!</p>
+<h2>Formulario de Datos</h2>
+<form #dataForm="ngForm">
+  <input type="hidden" name="id" [(ngModel)]="nuevoDato.id">
+
+  <div>
+    <label>Nombre:</label>
+    <input type="text" name="nombre" [(ngModel)]="nuevoDato.nombre" required>
+  </div>
+
+  <div>
+    <button type="button" (click)="agregarOActualizarDato(dataForm)" [disabled]="!dataForm.form.valid">Guardar</button>
+  </div>
+</form>

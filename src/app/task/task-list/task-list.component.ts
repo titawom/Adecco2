@@ -26,7 +26,7 @@ export class TaskListComponent {
   }
 
   TaskForm() {
-    
+    window.location.pathname = '/taskform';
   }
 //ELIMINAMOS DATOS
 /*   eliminarDato(id: number) {
