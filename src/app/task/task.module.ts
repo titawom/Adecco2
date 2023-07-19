@@ -14,6 +14,9 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    TaskDetailComponent
   ]
 })
 export class TaskModule { }

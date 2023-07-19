@@ -9,20 +9,22 @@ import { TaskService } from 'src/app/task.service';
 })
 export class TaskListComponent {
   datos: Task[] = [];
-
-  constructor(private dataService: TaskService) {}
+  task : Task;
+  
+  constructor(private dataService: TaskService) {
+    this.task = {id: 0, nombre: '0'}
+  }
 
   ngOnInit() {
     this.actualizarDatos();
-    console.log(this.datos);
   }
 
   actualizarDatos() {
     this.datos = this.dataService.getTasks();
   }
 
-  TaskDetail(id : number) {
-
+  TaskDetail(task : Task) {
+      this.task = task;
   }
 
   TaskForm() {
