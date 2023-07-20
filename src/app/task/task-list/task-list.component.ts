@@ -10,10 +10,10 @@ import { UpdateComponent } from '../update/update.component';
 })
 export class TaskListComponent {
   datos: Task[] = [];
-  task : Task;
+  taskDetail : Task;
   
   constructor(private dataService: TaskService) {
-    this.task = {id: 0, nombre: '0', edad: 0, prioridad:'0'}
+    this.taskDetail = {id: 0, nombre: '0', edad: 0, prioridad:'0'}
   }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class TaskListComponent {
   }
 
   TaskDetail(task : Task) {
-      this.task = task;
+      this.taskDetail = task;
   }
 
   TaskForm() {
