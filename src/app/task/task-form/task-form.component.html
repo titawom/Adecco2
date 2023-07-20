@@ -6,6 +6,14 @@
     <label>Nombre:</label>
     <input type="text" name="nombre" [(ngModel)]="nuevoDato.nombre" required>
   </div>
+  <div>
+    <label>Edad:</label>
+    <input type="text" name="edad" [(ngModel)]="nuevoDato.edad" required>
+  </div>
+  <div>
+    <label>Prioridad:</label>
+    <input type="text" name="prioridad" [(ngModel)]="nuevoDato.prioridad" required>
+  </div>
 
   <div>
     <button type="button" (click)="agregarOActualizarDato(dataForm)" [disabled]="!dataForm.form.valid">Guardar</button>

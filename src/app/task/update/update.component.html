@@ -1,0 +1,12 @@
+<form #dataForm="ngForm">
+    <input type="hidden" name="id" value="{{childInput.id}}">
+  
+    <div>
+      <label>Nombre:</label>
+      <input type="text" name="nombre" [(ngModel)]="nuevoDato.nombre" value="{{childInput.nombre}}" required>
+    </div>
+  
+    <div>
+      <button type="button" (click)="agregarOActualizarDato(dataForm)" [disabled]="!dataForm.form.valid">Guardar</button>
+    </div>
+  </form>

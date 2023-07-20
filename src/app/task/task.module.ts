@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { UpdateComponent } from './update/update.component';
 
 
 
@@ -10,13 +11,15 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
   declarations: [
     TaskListComponent,
     TaskFormComponent,
-    TaskDetailComponent
+    TaskDetailComponent,
+    UpdateComponent
   ],
   imports: [
     CommonModule
   ],
   exports : [
-    TaskDetailComponent
+    TaskDetailComponent,
+    UpdateComponent
   ]
 })
 export class TaskModule { }

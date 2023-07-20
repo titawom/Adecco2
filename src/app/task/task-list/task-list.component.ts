@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Task } from 'src/app/task.model';
 import { TaskService } from 'src/app/task.service';
+import { UpdateComponent } from '../update/update.component';
 
 @Component({
   selector: 'app-task-list',
@@ -12,7 +13,7 @@ export class TaskListComponent {
   task : Task;
   
   constructor(private dataService: TaskService) {
-    this.task = {id: 0, nombre: '0'}
+    this.task = {id: 0, nombre: '0', edad: 0, prioridad:'0'}
   }
 
   ngOnInit() {
@@ -30,13 +31,5 @@ export class TaskListComponent {
   TaskForm() {
     window.location.pathname = '/taskform';
   }
-//ELIMINAMOS DATOS
-/*   eliminarDato(id: number) {
-    this.dataService.deleteTask(id);
-    this.actualizarDatos();
-  } */
-//EDITAMOS DATOS
- /*  editarDato(dato: Data) {
-    this.dataService.setDatoParaEditar(dato);
-  } */
+
 }

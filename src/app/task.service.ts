@@ -17,9 +17,9 @@ export class TaskService {
 
   cargarDatosIniciales() {
     this.datos = [
-      { id: 1, nombre: 'Task1' },
-      { id: 2, nombre: 'Task2' },
-      { id: 3, nombre: 'Task3' }
+      { id: 1, nombre: 'Task1', edad: 4, prioridad: 'Primera' },
+      { id: 2, nombre: 'Task2', edad: 6, prioridad: 'Segunda' },
+      { id: 3, nombre: 'Task3', edad: 8, prioridad: 'Tercera' }
     ];
   }
 

@@ -2,10 +2,12 @@
 
 <ul>
   <li *ngFor="let task of datos">
-    {{ task.nombre }}
-    <button (click)="TaskDetail(task)">Detail</button>
-</li>
+    <h3>{{ task.nombre }}</h3>
+<!--     <button (click)="TaskDetail(task)">Updates</button>
+ -->    
+    <!--<app-update [childInput]="task"></app-update>-->
+    <app-task-detail [task]="task"></app-task-detail>
+  </li>
 </ul>
 <button (click)="TaskForm()">Create Form</button>
 
-<app-task-detail [childInput]="task"></app-task-detail>
